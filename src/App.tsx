@@ -1,25 +1,30 @@
-import type { Component } from 'solid-js';
+import type { Component } from "solid-js";
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+import styles from "./App.module.css";
+import Table from "./Table";
 
 const App: Component = () => {
+
   return (
     <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
+      <header>
+        <h1 class={styles.h1}>csvファイルエディタ(α版) v0.0.0</h1>
       </header>
+      <Table></Table>
+      <footer class={styles.footer}>
+        <div class={styles.footerMediate}>
+          {["フッター1", "©machiper0823", "フッター3"].map((ele) => {
+            return (
+              <a
+                class={styles.footerP}
+                onclick={() => alert("coming soon!")}
+              >
+                {ele}
+              </a>
+            );
+          })}
+        </div>
+      </footer>
     </div>
   );
 };
