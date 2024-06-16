@@ -4,7 +4,6 @@ import styles from "./App.module.css";
 import Table from "./Table";
 
 const App: Component = () => {
-
   return (
     <div class={styles.App}>
       <header>
